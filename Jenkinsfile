@@ -5,7 +5,7 @@ pipeline {
     ACCOUNT_ID = '014498646137'
     REPO_NAME  = 'devrescomhch/repo'                                 // Replace with your ECR repo name
     ECR_URI    = "${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${REPO_NAME}"
-    BRANCH     = env.BRANCH_NAME ?: 'main'
+    BRANCH     = env.BRANCH_NAME ?: 'master'
   }
   stages {
     stage('Checkout') {
